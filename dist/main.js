@@ -20,6 +20,7 @@ app.use(express_1.default.json());
 app.use(express_1.default.static('public'));
 app.set('view engine', 'ejs');
 app.use('/expenses', expenses_router_1.default);
+//! typeScript Error-ი არ არი მარა ბრაუზერში რო ვხსნი არ გადადის გვერდებზე ვერ გავიგე რისი ბრალია სავარაუდოდ დამისამრთრბის მგონია src სჰი რო ჩავაგდე ალბათ ამ viwes ვეღარ ხედავს მეინდერექტოირათ რო იქ მოძებნოსთქო
 app.get('/expense-list', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const expenses = yield (0, utils_1.readFile)('expenses.json', true);
     const page = Number(req.query.page) || 1;

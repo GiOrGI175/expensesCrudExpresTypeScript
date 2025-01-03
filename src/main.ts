@@ -16,6 +16,8 @@ app.set('view engine', 'ejs');
 
 app.use('/expenses', expenseRouter);
 
+//! typeScript Error-ი არ არი მარა ბრაუზერში რო ვხსნი არ გადადის გვერდებზე ვერ გავიგე რისი ბრალია სავარაუდოდ დამისამრთრბის მგონია src სჰი რო ჩავაგდე ალბათ ამ viwes ვეღარ ხედავს მეინდერექტოირათ რო იქ მოძებნოსთქო
+
 app.get('/expense-list', async (req: Request, res: Response) => {
   const expenses = await readFile('expenses.json', true);
 
