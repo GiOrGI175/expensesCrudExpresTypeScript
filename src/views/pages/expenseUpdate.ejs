@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('../partials/header') %>
+
+    <h1>update expense</h1>
+    <a href="/expense-list">Back to list</a>
+    <form>
+      <input
+        type="text"
+        value="<%= expense.category %>"
+        name="category"
+        placeholder="category"
+      />
+      <input
+        type="number"
+        value="<%= expense.price %>"
+        name="price"
+        placeholder="price"
+      />
+      <button>update</button>
+    </form>
+    <%- include('../partials/footer') %>
+
+    <script src="/src/public/ts/updateExpense.ts"></script>
+  </body>
+</html>
